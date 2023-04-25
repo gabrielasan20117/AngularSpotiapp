@@ -15,8 +15,7 @@ export class HomeComponent implements OnInit {
 
     this.spotify.getNetRealeases()
         .subscribe((data: any) => {
-          console.log(data.playlists.items);
-          this.nuevas_canciones = data.playlists.items
+          this.nuevas_canciones = data
         });
    }
 
