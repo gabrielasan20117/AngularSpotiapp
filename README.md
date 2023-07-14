@@ -1,5 +1,5 @@
 # AngularSpotiapp
-This project used Api Spotify, in specific the functions as Playlist and Artists.
+This project used Api Spotify, in specific the functions as Playlist and Artists for his developer.
 
 ## Screenshots of the application
 
