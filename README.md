@@ -1,4 +1,13 @@
 # AngularSpotiapp
+This project used Api Spotify, in specific the functions as Playlist and Artists.
+
+## Screenshots of the application
+
+Home
+
+Search
+
+## Configutation of Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
