@@ -14,6 +14,7 @@ import { ROUTES } from './app.routes';
 import { SpotifyService } from './services/spotify.service';
 //PIPES
 import { NoImagePipe } from './pipes/no-image.pipe';
+import { LoandingComponent } from './components/shared/loanding/loanding.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { NoImagePipe } from './pipes/no-image.pipe';
     HomeComponent,
     ArtistComponent,
     NavbarComponent,
-    NoImagePipe
+    NoImagePipe,
+    LoandingComponent
   ],
   imports: [
     BrowserModule,
