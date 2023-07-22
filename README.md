@@ -4,8 +4,14 @@ This project used Api Spotify, in specific the functions as Playlist and Artists
 ## Screenshots of the application
 
 Home
+![image](https://github.com/gabrielasan20117/AngularSpotiapp/assets/74748682/a59d378d-66db-41a5-a967-e652eae4acca)
 
-Search
+Search (no search)
+![image](https://github.com/gabrielasan20117/AngularSpotiapp/assets/74748682/3e702074-f37a-42ab-9f88-6dc18394e988)
+
+Search (with search)
+![image](https://github.com/gabrielasan20117/AngularSpotiapp/assets/74748682/44d9d86e-5688-42ea-80a2-437286483663)
+
 
 ## Configutation of Angular
 
