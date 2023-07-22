@@ -12,13 +12,18 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from './app.routes';
 //SERVICES
 import { SpotifyService } from './services/spotify.service';
+//PIPES
+import { NoImagePipe } from './pipes/no-image.pipe';
+import { LoandingComponent } from './components/shared/loanding/loanding.component';
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     HomeComponent,
     ArtistComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoImagePipe,
+    LoandingComponent
   ],
   imports: [
     BrowserModule,

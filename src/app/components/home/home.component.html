@@ -1,8 +1,13 @@
+<app-loanding *ngIf="loading"></app-loanding>
 <h1>Playlists</h1>
+<div *ngIf="error" class="alert alert-danger">
+    <h3>Error</h3>
+    <p>{{error_message}}</p>
+</div>
 <div class="row">
     <div class="col-3 mb-4" *ngFor="let playlist of nuevas_canciones">
         <div class="card border-secondary" style="min-height: auto;">
-            <img class="card-img-top" [src]="playlist.images[0].url">
+            <img class="card-img-top" [src]="playlist.images | noImage">
             <div class="card-body text-secondary">
                 <h5 class="card-title">{{playlist.name}}</h5>
                 <p class="card-text">{{playlist.description}}</p>
