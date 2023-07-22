@@ -3,11 +3,12 @@
         <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista">
     </div>
 </div>
+<br>
 <app-loanding *ngIf="loading"></app-loanding>
 <br>
 <div class="row">
-    <div class="col-3 mb-4" *ngFor="let artist of artists">
-        <div class="card border-secondary" style="min-height: auto;">
+    <div (click)="viewArtist(artist)" class="col-3 mb-4" *ngFor="let artist of artists">
+        <div  class="card border-secondary puntero" style="min-height: auto;">
             <img class="card-img-top" [src]="artist.images | noImage">
             <div class="card-body text-secondary">
                 <h5 class="card-title">{{artist.name}}</h5>

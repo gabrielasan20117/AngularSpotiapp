@@ -1,1 +1,48 @@
-<p>artist works!</p>
+<app-loanding *ngIf="loading"></app-loanding>
+<div class="container">
+<div class="row g-2" *ngIf="!loading">
+  <div class="card" style="width: 18rem;">
+      <img [src]="artista.images | noImage" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ artista.name}}</h5>
+        <p class="card-text">
+          <button type="button" class="btn btn-outline-secondary"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" *ngFor="let g of artista.genres" disabled>{{g}}</button>
+          </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Followers:</strong> {{artista.followers.total | number:'4.1-5' }}</li>
+        <li class="list-group-item"><strong>Top:</strong> {{artista.popularity}}</li>
+      </ul>
+  </div>
+</div>
+<br>
+<div class="row g-2">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Album</th>
+        <th scope="col">Cancion</th>
+        <th scope="col">Vista Previa</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let t of tracks">
+        <td scope="col"><img [src]="t.album.images | noImage" class="img-thumb"></td>
+        <td>{{ t.album.name  }}</td>
+        <td>{{ t.name  }}</td>
+        <td>
+          <audio [src]="t.preview_url" controls></audio>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>    
+<br>
+<div class="row g-2">
+    <button routerLink="/search" class="btn btn-outline-danger" style="width: 18rem;">
+        Volver
+    </button>
+</div>
+</div>

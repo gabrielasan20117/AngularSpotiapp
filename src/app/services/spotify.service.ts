@@ -36,7 +36,7 @@ export class SpotifyService {
     return this.getQuery('browse/featured-playlists').pipe( map( (data:any) => { return data['playlists'].items }))
   }
 
-  getArtista(termino : string){
+  getArtistas(termino : string){
     // var valores = 'Bearer BQCi9RpvVwxtkiIl3VpTm7WhCUo5rOk0bnZzVKUzcGtgc6LlRD-xOYZ1jMm16BHuVkbdH0gbHThEWnolHBNiDFgISavdbjlJhcRt_ZqlmYKZ9DHwr7I'
     // const headers = new HttpHeaders({
     //   'Authorization': valores
@@ -48,5 +48,13 @@ export class SpotifyService {
     //         }))
 
     return this.getQuery(`search?query=artist:${termino}&type=artist&locale=es-419%2Ces%3Bq%3D0.9&offset=0&limit=20`).pipe( map( (data:any) => { return data['artists'].items }))
+  }
+
+  getArtista(id: string){
+    return this.getQuery(`artists/${id}`)
+  }
+
+  getTopTracks(id: string){
+    return this.getQuery(`artists/${id}/top-tracks?market=US`).pipe( map( (data:any) => { return data['tracks'] }))
   }
 }

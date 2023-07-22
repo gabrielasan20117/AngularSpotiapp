@@ -1,5 +1,9 @@
 <app-loanding *ngIf="loading"></app-loanding>
 <h1>Playlists</h1>
+<div *ngIf="error" class="alert alert-danger">
+    <h3>Error</h3>
+    <p>{{error_message}}</p>
+</div>
 <div class="row">
     <div class="col-3 mb-4" *ngFor="let playlist of nuevas_canciones">
         <div class="card border-secondary" style="min-height: auto;">
